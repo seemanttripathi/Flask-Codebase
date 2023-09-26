@@ -1,2 +1,2 @@
 # Flask-Codebase
-Contains Multiple Flask applications..[More information to come]
+The above code is more for testing purposes rather than production uses.
