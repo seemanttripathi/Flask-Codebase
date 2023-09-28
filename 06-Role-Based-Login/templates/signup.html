@@ -1,0 +1,20 @@
+<h2>Sign up</h2>
+{% if current_user.is_authenticated %}
+	You are already logged in.
+{% else %}
+{{ msg }}<br>
+
+<form action="#" method="POST" id="signup-form">
+	<label>Email Address </label><input type="text" name="email" required /><br><br>
+	<label>Password </label><input type="password" name="password" required/><br><br>
+
+	<input type="radio" name="options" id="option1" value=1 required> Admin </input>
+	<input type="radio" name="options" id="option2" value=2> Teacher </input>
+	<input type="radio" name="options" id="option3" value=3> Staff </input>
+	<input type="radio" name="options" id="option3" value=4> Student </input><br><br>
+		
+	<button type="submit">Submit</button><br><br>
+			
+	<span>Already have an account?</span><a href="/signin">Sign in</a>
+</form>
+{% endif %}

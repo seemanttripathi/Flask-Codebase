@@ -1,0 +1,7 @@
+<!-- mydetails.html -->
+
+<h3>My Details</h3><br>
+<b>My email</b>: {{current_user.email}}
+| <b>Role</b>: {% for role in current_user.roles%}
+					{{role.name}}
+	{% endfor %} <br><br>

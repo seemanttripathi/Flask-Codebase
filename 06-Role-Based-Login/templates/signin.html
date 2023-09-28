@@ -1,0 +1,26 @@
+<!-- signin.html -->
+
+<h2>Sign in</h2>
+
+<!-- Show only if user is logged in -->
+{% if current_user.is_authenticated %}
+	You are already logged in.
+	
+<!-- Show if user is NOT logged in -->
+{% else %}
+<!-- msg that was passed while rendering template -->
+{{ msg }}<br>
+
+<form action="#" method="POST" id="signin-form">
+			<label>Email Address </label>
+			<input type="text" name="email" required /><br><br>
+			
+			<label>Password </label>
+			<input type="password" name="password" required/><br><br>
+			
+			<input class="btn btn-primary" type="submit" value="Submit"><br><br>
+	
+			<span>Don't have an account?</span>
+			<a href="/signup">Sign up</a>
+</form>
+{% endif %}
